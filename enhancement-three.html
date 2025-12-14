@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhancement Three: Databases and Security - Tristen Bradney</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .narrative-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .narrative-section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .narrative-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #1abc9c;
+        }
+
+        .narrative-section h3 {
+            color: #3498db;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .narrative-section p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .security-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .security-table th,
+        .security-table td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .security-table th {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .security-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .vulnerability-box {
+            background: #ffe6e6;
+            border-left: 4px solid #e74c3c;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .mitigation-box {
+            background: #e6f9e6;
+            border-left: 4px solid #27ae60;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .warning-icon {
+            color: #e74c3c;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .success-icon {
+            color: #27ae60;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #1abc9c;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Tristen Bradney</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#self-assessment" class="nav-link">Self-Assessment</a></li>
+                <li><a href="index.html#code-review" class="nav-link">Code Review</a></li>
+                <li><a href="index.html#enhancements" class="nav-link">Enhancements</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="narrative-content">
+            <a href="index.html#enhancements" class="back-link">← Back to Enhancements</a>
+
+            <h1>Enhancement Three: Databases and Security</h1>
+            <p class="subtitle">Comprehensive Database Security Implementation</p>
+
+            <div class="narrative-section">
+                <h2>Artifact Description</h2>
+                <p>
+                    Building upon the architectural improvements and algorithmic optimizations from the previous two
+                    enhancements, this final enhancement addresses critical security vulnerabilities in the Inventory
+                    Manager application. The original implementation, like many student projects, prioritized
+                    functionality
+                    over security, leaving the application vulnerable to common attacks and failing to protect user data
+                    adequately.
+                </p>
+
+                <div class="vulnerability-box">
+                    <p><span class="warning-icon">⚠</span> <strong>Critical Vulnerabilities Identified:</strong></p>
+                    <ul>
+                        <li><strong>Plaintext Password Storage:</strong> User passwords stored in clear text in the
+                            database</li>
+                        <li><strong>SQL Injection:</strong> Dynamic SQL queries built with string concatenation</li>
+                        <li><strong>No Database Encryption:</strong> Entire database readable if device is compromised
+                        </li>
+                        <li><strong>Missing Audit Trail:</strong> No logging of who modified data or when</li>
+                        <li><strong>Weak Input Validation:</strong> Insufficient validation of user inputs</li>
+                        <li><strong>No Session Management:</strong> No timeout or session invalidation mechanisms</li>
+                    </ul>
+                </div>
+
+                <p>
+                    These vulnerabilities represent serious security risks that would be unacceptable in any production
+                    application. This enhancement transforms the application from a security liability into a system
+                    that
+                    implements industry-standard security practices.
+                </p>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Justification for Inclusion</h2>
+                <p>
+                    I selected database security as the third enhancement category because security is not optional—it's
+                    a fundamental requirement for any application that handles user data. This enhancement demonstrates
+                    my understanding that:
+                </p>
+                <ul>
+                    <li>Security must be designed in from the beginning, not bolted on later</li>
+                    <li>Defense in depth requires multiple layers of security controls</li>
+                    <li>Security is an ongoing process, not a one-time implementation</li>
+                    <li>Compliance with security standards is essential for professional applications</li>
+                </ul>
+                <p>
+                    This enhancement showcases skills that are increasingly critical in the software industry:
+                </p>
+                <ul>
+                    <li><strong>Security mindset:</strong> Thinking like an attacker to identify vulnerabilities</li>
+                    <li><strong>Cryptography application:</strong> Proper use of hashing, encryption, and secure random
+                        generation</li>
+                    <li><strong>Secure coding practices:</strong> Input validation, parameterized queries, principle of
+                        least privilege</li>
+                    <li><strong>Compliance awareness:</strong> Understanding OWASP Top 10 and industry security
+                        standards</li>
+                    <li><strong>Privacy protection:</strong> Implementing data protection measures that respect user
+                        privacy</li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Specific Components Showcasing Skills</h2>
+
+                <h3>1. Secure Password Management with bcrypt</h3>
+                <p>
+                    I replaced plaintext password storage with bcrypt hashing, implementing industry-standard password
+                    security. This demonstrates understanding of:
+                </p>
+
+                <div class="mitigation-box">
+                    <p><span class="success-icon">✓</span> <strong>Implementation Details:</strong></p>
+                    <ul>
+                        <li><strong>Bcrypt Algorithm:</strong> Uses adaptive hashing with configurable work factor</li>
+                        <li><strong>Salt Generation:</strong> Automatic per-password salt prevents rainbow table attacks
+                        </li>
+                        <li><strong>Work Factor:</strong> Set to 12 rounds, balancing security and performance</li>
+                        <li><strong>Verification:</strong> Secure comparison that prevents timing attacks</li>
+                    </ul>
+                </div>
+
+                <p>
+                    <strong>Why bcrypt?</strong> Unlike fast hashing algorithms like MD5 or SHA-1 (which are designed to
+                    be fast and are therefore vulnerable to brute force), bcrypt is intentionally slow and includes
+                    built-in
+                    salting. Even if the database is compromised, passwords remain protected.
+                </p>
+
+                <h3>2. SQL Injection Prevention with Parameterized Queries</h3>
+                <p>
+                    I eliminated all SQL injection vulnerabilities by replacing string concatenation with parameterized
+                    queries throughout the application:
+                </p>
+
+                <div class="vulnerability-box">
+                    <p><span class="warning-icon">⚠</span> <strong>Original Vulnerable Code Pattern:</strong></p>
+                    <pre>String query = "SELECT * FROM users WHERE username = '" + username + "'";</pre>
+                    <p>This allows attackers to inject malicious SQL: <code>username = "admin' OR '1'='1"</code></p>
+                </div>
+
+                <div class="mitigation-box">
+                    <p><span class="success-icon">✓</span> <strong>Secure Implementation:</strong></p>
+                    <pre>String query = "SELECT * FROM users WHERE username = ?";
+PreparedStatement stmt = connection.prepareStatement(query);
+stmt.setString(1, username);</pre>
+                    <p>Parameters are properly escaped and cannot be interpreted as SQL code.</p>
+                </div>
+
+                <p>
+                    I applied this pattern to every database query in the application, ensuring comprehensive protection
+                    against SQL injection attacks—consistently ranked in the OWASP Top 10 most critical web application
+                    security risks.
+                </p>
+
+                <h3>3. Database Encryption with SQLCipher</h3>
+                <p>
+                    I implemented full database encryption using SQLCipher, an open-source extension to SQLite that
+                    provides transparent 256-bit AES encryption:
+                </p>
+
+                <div class="mitigation-box">
+                    <p><span class="success-icon">✓</span> <strong>Encryption Features:</strong></p>
+                    <ul>
+                        <li><strong>Transparent encryption:</strong> Database encrypted at the file level</li>
+                        <li><strong>AES-256:</strong> Industry-standard encryption algorithm</li>
+                        <li><strong>Key derivation:</strong> PBKDF2 with 64,000 iterations for key generation</li>
+                        <li><strong>Performance:</strong> Minimal overhead (typically 5-15% compared to unencrypted
+                            SQLite)</li>
+                    </ul>
+                </div>
+
+                <p>
+                    This means that even if an attacker gains physical access to the device and extracts the database
+                    file,
+                    they cannot read the contents without the encryption key. This protects against device theft,
+                    malicious apps, and unauthorized backup access.
+                </p>
+
+                <h3>4. Comprehensive Audit Trail System</h3>
+                <p>
+                    I implemented an audit logging system that tracks all data modifications:
+                </p>
+                <ul>
+                    <li><strong>Who:</strong> User ID of the person making changes</li>
+                    <li><strong>What:</strong> Type of operation (INSERT, UPDATE, DELETE)</li>
+                    <li><strong>When:</strong> Timestamp of the operation</li>
+                    <li><strong>Details:</strong> Old and new values for updates</li>
+                </ul>
+
+                <p>
+                    This audit trail serves multiple purposes:
+                </p>
+                <ul>
+                    <li>Forensic analysis after security incidents</li>
+                    <li>Compliance with data protection regulations</li>
+                    <li>Detecting suspicious activity patterns</li>
+                    <li>Accountability for data changes</li>
+                </ul>
+
+                <h3>5. Input Validation and Sanitization</h3>
+                <p>
+                    I implemented multi-layer input validation:
+                </p>
+                <ul>
+                    <li><strong>Client-side validation:</strong> Immediate feedback to users, better UX</li>
+                    <li><strong>ViewModel validation:</strong> Business logic layer validation</li>
+                    <li><strong>Database constraints:</strong> Final layer of defense with NOT NULL, UNIQUE, CHECK
+                        constraints</li>
+                </ul>
+
+                <div class="mitigation-box">
+                    <p><span class="success-icon">✓</span> <strong>Validation Rules Implemented:</strong></p>
+                    <ul>
+                        <li>Username: 3-20 alphanumeric characters</li>
+                        <li>Password: Minimum 8 characters, must include uppercase, lowercase, number, special character
+                        </li>
+                        <li>Item quantity: Positive integers only</li>
+                        <li>Item name: 1-100 characters, sanitized for special characters</li>
+                    </ul>
+                </div>
+
+                <h3>6. Session Management and Timeout</h3>
+                <p>
+                    I implemented secure session management:
+                </p>
+                <ul>
+                    <li>Session tokens stored securely using Android's EncryptedSharedPreferences</li>
+                    <li>Automatic session timeout after 30 minutes of inactivity</li>
+                    <li>Session invalidation on logout</li>
+                    <li>Re-authentication required for sensitive operations</li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Security Improvements Summary</h2>
+
+                <table class="security-table">
+                    <thead>
+                        <tr>
+                            <th>Vulnerability</th>
+                            <th>Risk Level</th>
+                            <th>Mitigation</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Plaintext Passwords</td>
+                            <td>Critical</td>
+                            <td>Bcrypt hashing with salt</td>
+                            <td style="color: #27ae60; font-weight: bold;">✓ Resolved</td>
+                        </tr>
+                        <tr>
+                            <td>SQL Injection</td>
+                            <td>Critical</td>
+                            <td>Parameterized queries</td>
+                            <td style="color: #27ae60; font-weight: bold;">✓ Resolved</td>
+                        </tr>
+                        <tr>
+                            <td>Database Not Encrypted</td>
+                            <td>High</td>
+                            <td>SQLCipher AES-256</td>
+                            <td style="color: #27ae60; font-weight: bold;">✓ Resolved</td>
+                        </tr>
+                        <tr>
+                            <td>No Audit Trail</td>
+                            <td>Medium</td>
+                            <td>Comprehensive logging system</td>
+                            <td style="color: #27ae60; font-weight: bold;">✓ Resolved</td>
+                        </tr>
+                        <tr>
+                            <td>Weak Input Validation</td>
+                            <td>Medium</td>
+                            <td>Multi-layer validation</td>
+                            <td style="color: #27ae60; font-weight: bold;">✓ Resolved</td>
+                        </tr>
+                        <tr>
+                            <td>Poor Session Management</td>
+                            <td>Medium</td>
+                            <td>Encrypted sessions with timeout</td>
+                            <td style="color: #27ae60; font-weight: bold;">✓ Resolved</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Enhancement Process and Learning</h2>
+
+                <h3>Security Assessment Phase</h3>
+                <p>
+                    Before implementing security fixes, I conducted a comprehensive security assessment:
+                </p>
+                <ul>
+                    <li>Reviewed OWASP Top 10 vulnerabilities and mapped them to the application</li>
+                    <li>Performed manual code review looking for security anti-patterns</li>
+                    <li>Created a threat model identifying potential attack vectors</li>
+                    <li>Prioritized vulnerabilities based on risk (likelihood × impact)</li>
+                </ul>
+
+                <p>
+                    This systematic approach ensured I addressed the most critical issues first and didn't overlook
+                    important vulnerabilities.
+                </p>
+
+                <h3>Implementation Challenges</h3>
+                <p>
+                    Several challenges emerged during the security enhancement:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Backward compatibility:</strong> Migrating existing plaintext passwords to bcrypt hashes
+                        required careful handling to avoid locking out existing users.
+                    </li>
+                    <li>
+                        <strong>Performance impact:</strong> Encryption and hashing add computational overhead. I had to
+                        balance security with acceptable performance.
+                    </li>
+                    <li>
+                        <strong>Key management:</strong> Determining how to securely store the database encryption key
+                        required research into Android's secure storage options.
+                    </li>
+                    <li>
+                        <strong>Testing security features:</strong> Writing tests for security features is challenging
+                        because you're testing that something doesn't happen (e.g., SQL injection fails).
+                    </li>
+                </ul>
+
+                <h3>What I Learned</h3>
+                <p>
+                    This enhancement deepened my understanding of security in several important ways:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Security is hard to retrofit:</strong> Adding security after the fact is much more
+                        difficult than designing it in from the start. This reinforced the importance of security-first
+                        design.
+                    </li>
+                    <li>
+                        <strong>Defense in depth works:</strong> Multiple layers of security (encryption, hashing,
+                        parameterized queries, validation) provide better protection than any single measure.
+                    </li>
+                    <li>
+                        <strong>Usability matters:</strong> Security measures can't make the application unusable.
+                        Finding
+                        the balance between security and usability is crucial.
+                    </li>
+                    <li>
+                        <strong>Compliance drives security:</strong> Understanding regulations like GDPR and standards
+                        like
+                        OWASP provides concrete security requirements.
+                    </li>
+                    <li>
+                        <strong>Security requires maintenance:</strong> Algorithms become outdated, new vulnerabilities
+                        are discovered. Security is an ongoing process, not a one-time fix.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Testing and Validation</h2>
+
+                <h3>Security Testing Performed</h3>
+                <ul>
+                    <li>
+                        <strong>Penetration testing:</strong> Attempted SQL injection attacks to verify parameterized
+                        queries prevent them
+                    </li>
+                    <li>
+                        <strong>Password strength testing:</strong> Verified bcrypt implementation using known test
+                        vectors
+                    </li>
+                    <li>
+                        <strong>Encryption validation:</strong> Confirmed database file is unreadable without correct
+                        key
+                    </li>
+                    <li>
+                        <strong>Session testing:</strong> Verified session timeout and invalidation work correctly
+                    </li>
+                    <li>
+                        <strong>Input validation testing:</strong> Attempted to bypass validation with various malicious
+                        inputs
+                    </li>
+                </ul>
+
+                <h3>Code Review</h3>
+                <p>
+                    I conducted a security-focused code review, specifically looking for:
+                </p>
+                <ul>
+                    <li>Hardcoded credentials or keys (none found)</li>
+                    <li>Insecure random number generation (replaced with SecureRandom)</li>
+                    <li>Information disclosure in error messages (sanitized)</li>
+                    <li>Unvalidated redirects or forwards (not applicable to this app)</li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Course Outcomes Alignment</h2>
+
+                <p>This enhancement directly addresses the following course outcomes:</p>
+
+                <h3>Outcome 5: Security Mindset</h3>
+                <p>
+                    This entire enhancement demonstrates a security mindset. By identifying vulnerabilities,
+                    understanding
+                    how they could be exploited, and implementing comprehensive mitigations, I have shown the ability to
+                    anticipate adversarial exploits and design secure systems. The defense-in-depth approach shows
+                    understanding that multiple security layers are necessary to protect data and resources.
+                </p>
+
+                <h3>Outcome 4: Well-Founded Techniques and Tools</h3>
+                <p>
+                    The use of industry-standard security tools (bcrypt, SQLCipher, parameterized queries) and best
+                    practices (input validation, audit logging, session management) demonstrates the ability to
+                    implement
+                    solutions using well-founded techniques that deliver security value.
+                </p>
+
+                <h3>Outcome 2: Professional Communication</h3>
+                <p>
+                    Security requires clear communication. Through code comments explaining security rationale, this
+                    narrative documenting security enhancements, and inline documentation of security-critical code, I
+                    have demonstrated the ability to communicate security concepts to both technical and non-technical
+                    audiences.
+                </p>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Compliance and Best Practices</h2>
+                <p>
+                    This enhancement aligns with several industry standards and best practices:
+                </p>
+
+                <h3>OWASP Top 10 Compliance</h3>
+                <ul>
+                    <li><strong>A03:2021 – Injection:</strong> Prevented via parameterized queries</li>
+                    <li><strong>A07:2021 – Identification and Authentication Failures:</strong> Addressed via bcrypt and
+                        session management</li>
+                    <li><strong>A02:2021 – Cryptographic Failures:</strong> Mitigated via SQLCipher encryption</li>
+                    <li><strong>A09:2021 – Security Logging and Monitoring Failures:</strong> Resolved via audit trail
+                    </li>
+                </ul>
+
+                <h3>Mobile Security Best Practices</h3>
+                <ul>
+                    <li>Uses Android Keystore for secure key storage</li>
+                    <li>Implements certificate pinning for network communications</li>
+                    <li>Follows principle of least privilege for permissions</li>
+                    <li>Uses secure defaults throughout the application</li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Future Security Enhancements</h2>
+                <p>
+                    While this enhancement significantly improved security, additional measures could be implemented:
+                </p>
+                <ul>
+                    <li><strong>Two-factor authentication (2FA):</strong> Add additional authentication factor</li>
+                    <li><strong>Biometric authentication:</strong> Fingerprint or face recognition on supported devices
+                    </li>
+                    <li><strong>Remote wipe capability:</strong> Allow users to remotely clear data if device is lost
+                    </li>
+                    <li><strong>Penetration testing:</strong> Engage professional security testers to find remaining
+                        vulnerabilities</li>
+                    <li><strong>Security monitoring:</strong> Implement real-time security event monitoring and alerting
+                    </li>
+                    <li><strong>Rate limiting:</strong> Prevent brute force attacks on login</li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Conclusion</h2>
+                <p>
+                    The database and security enhancement transformed the Inventory Manager from a vulnerable
+                    application
+                    into a security-conscious system that implements industry-standard protections. This work
+                    demonstrates
+                    my understanding that security is not an afterthought but a fundamental requirement for any
+                    application
+                    that handles user data.
+                </p>
+                <p>
+                    Through this enhancement, I have developed a security mindset—the ability to think like an attacker,
+                    identify vulnerabilities, and implement comprehensive defenses. I have learned to balance security
+                    with usability, to implement defense in depth, and to follow established security standards and best
+                    practices.
+                </p>
+                <p>
+                    Combined with the architectural improvements from Enhancement One and the algorithmic optimizations
+                    from Enhancement Two, this security enhancement completes the transformation of the Inventory
+                    Manager
+                    into a professional-quality application. The application is now well-architected, performant, and
+                    secure—ready for real-world deployment and use.
+                </p>
+                <p>
+                    This capstone project as a whole demonstrates my growth throughout the Computer Science program. I
+                    have moved from writing code that simply works to creating secure, efficient, well-designed software
+                    that meets professional standards. I am prepared to enter the software industry with the knowledge,
+                    skills, and mindset necessary to build applications that users can trust and rely upon.
+                </p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://github.com/tbradn/CS499-Computer-Science-Capstone" target="_blank"
+                    class="btn-primary">View Code on GitHub</a>
+                <a href="index.html#enhancements" class="btn-secondary">Back to Enhancements</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tristen Bradney. All rights reserved.</p>
+            <p class="footer-note">CS-499 Computer Science Capstone | Southern New Hampshire University</p>
+        </div>
+    </footer>
+</body>
+
+</html>
