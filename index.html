@@ -4,94 +4,373 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tristen's Portfolio</title>
+  <title>Tristen Bradney - CS-499 ePortfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div id="night-sky"></div>
-  <header>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Tristen Bradney</a>
+      <ul class="nav-menu">
+        <li><a href="#self-assessment" class="nav-link">Professional Self-Assessment</a></li>
+        <li><a href="#code-review" class="nav-link">Code Review</a></li>
+        <li><a href="#enhancements" class="nav-link">Enhancements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-    </nav>
-    <div class="header-content">
-      <h1>Hi, I'm Tristen</h1>
-      <p>Aspiring Software Developer | Computer Science Student</p>
     </div>
-  </header>
+  </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a passionate computer science student eager to solve problems through software development. I'm currently
-      enrolled in Southern New Hampshire University, studying for my BS in computer science. With experience in various
-      projects, I love learning and applying new technologies to create impactful solutions.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Artifacts</h2>
-    <div class="project">
-      <h3>Artifact 1</h3>
-      <p>Description of project.</p>
-      <a href="https://github.com/your-repo-link">View on GitHub</a>
-    </div>
-    <div class="project">
-      <h3>Artifact 2</h3>
-      <p>Description of the project.</p>
-      <a href="https://github.com/your-repo-link">View on GitHub</a>
-    </div>
-    <div class="project">
-      <h3>Artifact 3</h3>
-      <p>Description of the project.</p>
-      <a href="https://github.com/your-repo-link">View on GitHub</a>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>CS-499 Computer Science Capstone</h1>
+      <h2>ePortfolio</h2>
+      <p class="subtitle">Southern New Hampshire University | Computer Science</p>
+      <p class="tagline">Demonstrating Growth Through Software Engineering, Algorithms, and Database Security</p>
     </div>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Programming Languages: Python, Java, C++, Javascript</li>
-      <li>Frameworks: ReactNative, Flask</li>
-      <li>Tools: Git, VSCode</li>
-    </ul>
+  <!-- Professional Self-Assessment -->
+  <section id="self-assessment" class="section">
+    <div class="container">
+      <h2 class="section-title">Professional Self-Assessment</h2>
+      <div class="content-card">
+        <p class="intro-text">
+          Completing the Computer Science program at Southern New Hampshire University has been a transformative
+          journey that has shaped not only my technical abilities but also my professional identity and career
+          aspirations. This capstone project represents the culmination of my growth as a computer science
+          professional, showcasing my ability to develop secure, efficient, and well-architected software solutions.
+        </p>
+
+        <a href="professional-self-assessment.html" class="btn-primary">Read Full Self-Assessment</a>
+
+        <div class="highlights">
+          <h3>Key Competencies Demonstrated</h3>
+          <div class="competency-grid">
+            <div class="competency-item">
+              <h4>Collaboration</h4>
+              <p>Team environments, Agile methodologies, code reviews</p>
+            </div>
+            <div class="competency-item">
+              <h4>Communication</h4>
+              <p>Stakeholder engagement, technical documentation, presentations</p>
+            </div>
+            <div class="competency-item">
+              <h4>Algorithms & Data Structures</h4>
+              <p>Optimization, complexity analysis, efficient implementations</p>
+            </div>
+            <div class="competency-item">
+              <h4>Software Engineering</h4>
+              <p>MVVM architecture, design patterns, best practices</p>
+            </div>
+            <div class="competency-item">
+              <h4>Database Management</h4>
+              <p>SQL, NoSQL, schema design, query optimization</p>
+            </div>
+            <div class="competency-item">
+              <h4>Security Mindset</h4>
+              <p>Secure coding, vulnerability mitigation, encryption</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: tbradney@yahoo.com</p>
-    <p>GitHub: <a href="https://github.com/tbradn">github.com/tbradn</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/tristen-bradney-28a64721b">linkedin.com/in/tristen-bradney-28a64721b</a></p>
+  <!-- Code Review -->
+  <section id="code-review" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Code Review</h2>
+      <div class="content-card">
+        <p class="section-intro">
+          Before enhancing the Inventory Manager application, I conducted a comprehensive code review
+          to identify areas for improvement in software design, algorithms, and security. This review
+          demonstrates industry-standard collaborative practices and critical analysis skills.
+        </p>
+
+        <div class="video-container">
+          <iframe width="100%" height="500" src="https://www.youtube.com/embed/sbB3h0WUXHk" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="review-highlights">
+          <h3>Code Review Focus Areas</h3>
+          <ul>
+            <li><strong>Existing Functionality:</strong> Walkthrough of the original Inventory Manager application
+              features</li>
+            <li><strong>Code Analysis:</strong> Evaluation of structure, logic, efficiency, security, and documentation
+            </li>
+            <li><strong>Enhancement Plan:</strong> Detailed roadmap for improvements across three categories</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Tristen. All rights reserved.</p>
+  <!-- Enhancements -->
+  <section id="enhancements" class="section">
+    <div class="container">
+      <h2 class="section-title">Project Enhancements</h2>
+      <p class="section-intro">
+        The Inventory Manager application has been enhanced across three key categories to demonstrate
+        comprehensive computer science skills and professional growth.
+      </p>
+
+      <!-- Enhancement 1: Software Design/Engineering -->
+      <div class="enhancement-card">
+        <div class="enhancement-header">
+          <span class="enhancement-number">01</span>
+          <h3>Software Design and Engineering</h3>
+        </div>
+        <div class="enhancement-content">
+          <h4>MVVM Architecture Implementation</h4>
+          <p>
+            Refactored the entire application to implement the Model-View-ViewModel (MVVM) architectural
+            pattern, improving separation of concerns, testability, and maintainability. This enhancement
+            demonstrates understanding of software design principles and best practices for Android development.
+          </p>
+
+          <div class="enhancement-details">
+            <div class="detail-section">
+              <h5>Key Improvements</h5>
+              <ul>
+                <li>Implemented ViewModel classes for business logic separation</li>
+                <li>Created LiveData observers for reactive UI updates</li>
+                <li>Improved code modularity and reusability</li>
+                <li>Enhanced testability through dependency injection principles</li>
+              </ul>
+            </div>
+
+            <div class="detail-section">
+              <h5>Technologies Used</h5>
+              <p>Java, Android SDK, Android Architecture Components, LiveData, ViewModel</p>
+            </div>
+          </div>
+
+          <div class="enhancement-links">
+            <a href="enhancement-one.html" class="btn-secondary">Read Full Narrative</a>
+            <a href="https://github.com/tbradn/CS499-Computer-Science-Capstone" target="_blank" class="btn-outline">View
+              on
+              GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enhancement 2: Algorithms and Data Structures -->
+      <div class="enhancement-card">
+        <div class="enhancement-header">
+          <span class="enhancement-number">02</span>
+          <h3>Algorithms and Data Structures</h3>
+        </div>
+        <div class="enhancement-content">
+          <h4>Advanced Search, Sort, and Priority Queue Implementation</h4>
+          <p>
+            Enhanced the application with efficient search algorithms, optimized sorting mechanisms, and
+            priority queue functionality using heap data structures. This demonstrates ability to select
+            and implement appropriate algorithms to improve performance and user experience.
+          </p>
+
+          <div class="enhancement-details">
+            <div class="detail-section">
+              <h5>Key Improvements</h5>
+              <ul>
+                <li>Implemented binary search for sorted inventory data</li>
+                <li>Added multiple sorting options (name, quantity, priority)</li>
+                <li>Integrated priority queue using min-heap structure</li>
+                <li>Optimized database queries for reduced time complexity</li>
+              </ul>
+            </div>
+
+            <div class="detail-section">
+              <h5>Performance Impact</h5>
+              <p>Search operations reduced from O(n) to O(log n), significantly improving response time for large
+                datasets</p>
+            </div>
+          </div>
+
+          <div class="enhancement-links">
+            <a href="enhancement-two.html" class="btn-secondary">Read Full Narrative</a>
+            <a href="https://github.com/tbradn/CS499-Computer-Science-Capstone" target="_blank" class="btn-outline">View
+              on
+              GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enhancement 3: Databases -->
+      <div class="enhancement-card">
+        <div class="enhancement-header">
+          <span class="enhancement-number">03</span>
+          <h3>Databases and Security</h3>
+        </div>
+        <div class="enhancement-content">
+          <h4>Comprehensive Database Security Implementation</h4>
+          <p>
+            Addressed critical security vulnerabilities by implementing encryption, secure authentication,
+            SQL injection prevention, and audit logging. This enhancement demonstrates a security mindset
+            and understanding of data protection best practices.
+          </p>
+
+          <div class="enhancement-details">
+            <div class="detail-section">
+              <h5>Key Improvements</h5>
+              <ul>
+                <li>Implemented bcrypt password hashing for secure authentication</li>
+                <li>Replaced string concatenation with parameterized queries</li>
+                <li>Added SQLite database encryption (SQLCipher)</li>
+                <li>Created audit trail system for tracking data changes</li>
+                <li>Implemented input validation and sanitization</li>
+              </ul>
+            </div>
+
+            <div class="detail-section">
+              <h5>Security Standards</h5>
+              <p>Follows OWASP guidelines and industry best practices for mobile application security</p>
+            </div>
+          </div>
+
+          <div class="enhancement-links">
+            <a href="enhancement-three.html" class="btn-secondary">Read Full Narrative</a>
+            <a href="https://github.com/tbradn/CS499-Computer-Science-Capstone" target="_blank" class="btn-outline">View
+              on
+              GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Original vs Enhanced Comparison -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Project Evolution</h2>
+      <div class="comparison-container">
+        <div class="comparison-card">
+          <h3>Original Artifact</h3>
+          <ul>
+            <li>Basic CRUD operations</li>
+            <li>Simple linear search</li>
+            <li>Plaintext password storage</li>
+            <li>SQL injection vulnerabilities</li>
+            <li>Monolithic code structure</li>
+          </ul>
+          <a href="https://github.com/tbradn/CS499-Computer-Science-Capstone" target="_blank" class="btn-outline">View
+            Original Code</a>
+        </div>
+
+        <div class="comparison-arrow">
+          <span>→</span>
+        </div>
+
+        <div class="comparison-card enhanced">
+          <h3>Enhanced Artifact</h3>
+          <ul>
+            <li>MVVM architecture pattern</li>
+            <li>Binary search & priority queues</li>
+            <li>Bcrypt password hashing</li>
+            <li>Parameterized queries</li>
+            <li>Modular, testable components</li>
+            <li>Database encryption</li>
+            <li>Audit trail logging</li>
+          </ul>
+          <a href="https://github.com/tbradn/CS499-Computer-Science-Capstone" target="_blank" class="btn-primary">View
+            Enhanced
+            Code</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Technologies -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <div class="skill-tags">
+            <span>Java</span>
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>C++</span>
+            <span>SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Frameworks & Tools</h3>
+          <div class="skill-tags">
+            <span>Android SDK</span>
+            <span>Angular</span>
+            <span>Express.js</span>
+            <span>Node.js</span>
+            <span>Git</span>
+            <span>VS Code</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Databases</h3>
+          <div class="skill-tags">
+            <span>SQLite</span>
+            <span>MySQL</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Concepts & Practices</h3>
+          <div class="skill-tags">
+            <span>MVVM Architecture</span>
+            <span>Data Structures</span>
+            <span>Algorithms</span>
+            <span>Security</span>
+            <span>Testing</span>
+            <span>Agile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-content">
+        <p class="contact-intro">
+          I'm actively seeking opportunities in software quality assurance and testing.
+          Let's connect to discuss how I can contribute to your team.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:tbradney@yahoo.com" class="contact-item">
+            <span class="icon">📧</span>
+            <span>tbradney@yahoo.com</span>
+          </a>
+          <a href="https://github.com/tbradn?tab=repositories" target="_blank" class="contact-item">
+            <span class="icon">💻</span>
+            <span>github.com/tbradn</span>
+          </a>
+          <a href="https://www.linkedin.com/in/tristen-bradney-28a64721b/" target="_blank" class="contact-item">
+            <span class="icon">💼</span>
+            <span>LinkedIn Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Tristen Bradney. All rights reserved.</p>
+      <p class="footer-note">CS-499 Computer Science Capstone | Southern New Hampshire University</p>
+    </div>
   </footer>
-
-  <script>
-    const nightSky = document.getElementById("night-sky");
-
-    function backgroundAnimation() {
-      console.log("Star created.");
-      const star = document.createElement("div");
-      star.className = "star";
-      star.style.setProperty("--size", Math.random() * 2 + 1); // Random size
-      star.style.setProperty("--duration", `${Math.random() * 100 + 3}s`); // Random duration
-      star.style.setProperty("--delay", `${Math.random() * 5}s`); // Random delay
-      star.style.setProperty("--top", `${Math.random() * 100}%`); // Random top position
-      star.style.setProperty("--left", `${Math.random() * 100}%`); // Random left position
-      nightSky.appendChild(star);
-    }
-
-    // Generate 50 stars
-    for (let i = 0; i < 50; i++) {
-      backgroundAnimation();
-    }
-  </script>
 </body>
 
 </html>
