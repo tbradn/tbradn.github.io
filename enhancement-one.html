@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhancement One: Software Design and Engineering - Tristen Bradney</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .narrative-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .narrative-section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .narrative-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #1abc9c;
+        }
+
+        .narrative-section p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .code-example {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .code-example pre {
+            margin: 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #1abc9c;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Tristen Bradney</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#self-assessment" class="nav-link">Self-Assessment</a></li>
+                <li><a href="index.html#code-review" class="nav-link">Code Review</a></li>
+                <li><a href="index.html#enhancements" class="nav-link">Enhancements</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="narrative-content">
+            <a href="index.html#enhancements" class="back-link">← Back to Enhancements</a>
+
+            <h1>Enhancement One: Software Design and Engineering</h1>
+            <p class="subtitle">MVVM Architecture Implementation</p>
+
+            <div class="narrative-section">
+                <h2>Artifact Description</h2>
+                <p>
+                    The artifact selected for this enhancement is the Inventory Manager application, originally
+                    developed
+                    for CS-360 (Mobile Architecture and Programming). This Android application provides
+                    basic inventory management functionality, allowing users to add, view, update, and delete inventory
+                    items through a mobile interface. The original implementation used a traditional activity-based
+                    architecture with direct database interactions within the UI layer.
+                </p>
+                <p>
+                    <strong>Original Features:</strong>
+                </p>
+                <ul id=list1>
+                    <li>User authentication (login/register)</li>
+                    <li>CRUD operations for inventory items</li>
+                    <li>SQLite database integration</li>
+                    <li>Basic UI with RecyclerView for item display</li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Justification for Inclusion</h2>
+                <p>
+                    I selected this artifact for Enhancement One because it presented an excellent opportunity to
+                    demonstrate my understanding of software design patterns and architectural best practices. The
+                    original implementation, while functional, suffered from several design issues common in early
+                    Android development:
+                </p>
+                <ul>
+                    <li><strong>Tight coupling</strong> between UI components and business logic</li>
+                    <li><strong>Difficulty in testing</strong> due to dependencies on Android framework components</li>
+                    <li><strong>Poor separation of concerns</strong> making maintenance and extension challenging</li>
+                    <li><strong>Lack of lifecycle awareness</strong> leading to potential memory leaks</li>
+                </ul>
+                <p>
+                    By refactoring this application to implement the Model-View-ViewModel (MVVM) architecture pattern,
+                    I was able to showcase my ability to:
+                </p>
+                <ul>
+                    <li>Apply industry-standard architectural patterns to improve code quality</li>
+                    <li>Implement Android Architecture Components (ViewModel, LiveData, Repository pattern)</li>
+                    <li>Create modular, maintainable, and testable code</li>
+                    <li>Demonstrate understanding of software engineering principles like separation of concerns and
+                        dependency inversion</li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Specific Components Showcasing Skills</h2>
+
+                <h3>1. ViewModel Implementation</h3>
+                <p>
+                    I created dedicated ViewModel classes for each major feature (InventoryViewModel, LoginViewModel),
+                    which manage UI-related data in a lifecycle-conscious way. This demonstrates my understanding of:
+                </p>
+                <ul>
+                    <li>Android lifecycle management</li>
+                    <li>Data survival across configuration changes</li>
+                    <li>Proper state management in mobile applications</li>
+                </ul>
+
+                <h3>2. LiveData Integration</h3>
+                <p>
+                    I implemented LiveData observers to enable reactive UI updates, ensuring the interface automatically
+                    reflects changes in the underlying data. This showcases:
+                </p>
+                <ul>
+                    <li>Understanding of reactive programming principles</li>
+                    <li>Ability to create responsive, user-friendly interfaces</li>
+                    <li>Knowledge of observer pattern implementation</li>
+                </ul>
+
+                <h3>3. Repository Pattern</h3>
+                <p>
+                    I created a repository layer to abstract data sources and provide a clean API for data operations.
+                    This demonstrates:
+                </p>
+                <ul>
+                    <li>Understanding of clean architecture principles</li>
+                    <li>Ability to create maintainable abstractions</li>
+                    <li>Preparation for future scalability (easy to add remote data sources)</li>
+                </ul>
+
+                <h3>4. Dependency Injection Principles</h3>
+                <p>
+                    While not using a full DI framework, I structured the code to enable easy dependency injection,
+                    improving testability and modularity.
+                </p>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Enhancement Process and Learning</h2>
+
+                <h3>Planning and Design</h3>
+                <p>
+                    Before beginning the refactoring process, I created a comprehensive architecture diagram to
+                    visualize
+                    the new structure and identify the components needed. This planning phase reinforced the importance
+                    of thinking through design decisions before implementation—a critical skill in professional software
+                    development.
+                </p>
+
+                <h3>Implementation Challenges</h3>
+                <p>
+                    The refactoring process presented several challenges that deepened my understanding:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Data flow redesign:</strong> I had to completely rethink how data flows through the
+                        application, moving from direct database calls to a layered architecture with proper
+                        abstractions.
+                    </li>
+                    <li>
+                        <strong>Lifecycle management:</strong> Understanding how ViewModels survive configuration
+                        changes
+                        and properly scope their lifecycle taught me important lessons about Android development.
+                    </li>
+                    <li>
+                        <strong>Threading considerations:</strong> Implementing database operations on background
+                        threads
+                        while updating UI on the main thread required careful attention to threading models.
+                    </li>
+                </ul>
+
+                <h3>What I Learned</h3>
+                <p>
+                    This enhancement process taught me several valuable lessons:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Architectural patterns aren't just theory:</strong> Implementing MVVM provided tangible
+                        benefits in code organization and testability, demonstrating why these patterns are industry
+                        standards.
+                    </li>
+                    <li>
+                        <strong>Refactoring requires discipline:</strong> I learned to make incremental changes, test
+                        frequently, and maintain backwards compatibility during the transition period.
+                    </li>
+                    <li>
+                        <strong>Documentation is crucial:</strong> Creating clear code comments and architectural
+                        documentation made the refactoring process smoother and will benefit future maintainers.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Course Outcomes Alignment</h2>
+
+                <p>This enhancement directly addresses the following course outcomes:</p>
+
+                <h3>Outcome 2: Professional Communication</h3>
+                <p>
+                    Through comprehensive code comments, architectural documentation, and this narrative, I have
+                    demonstrated the ability to communicate technical concepts clearly to different audiences.
+                </p>
+
+                <h3>Outcome 4: Innovative Techniques and Tools</h3>
+                <p>
+                    By implementing Android Architecture Components and modern architectural patterns, I have shown
+                    the ability to use industry-standard tools and techniques to deliver professional-quality software.
+                </p>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Conclusion</h2>
+                <p>
+                    The software design and engineering enhancement transformed the Inventory Manager from a simple
+                    student project into a well-architected application that demonstrates professional development
+                    practices. This enhancement showcases my growth from learning basic programming concepts to
+                    understanding and applying sophisticated design patterns that are essential in modern software
+                    development.
+                </p>
+                <p>
+                    The MVVM architecture provides a solid foundation for the subsequent enhancements, demonstrating
+                    that good software design is the cornerstone of successful software projects. This work represents
+                    my readiness to contribute to professional development teams and build maintainable, scalable
+                    software solutions.
+                </p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://github.com/tbradn/CS499-Computer-Science-Capstone" target="_blank"
+                    class="btn-primary">View Code
+                    on GitHub</a>
+                <a href="index.html#enhancements" class="btn-secondary">Back to Enhancements</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tristen Bradney. All rights reserved.</p>
+            <p class="footer-note">CS-499 Computer Science Capstone | Southern New Hampshire University</p>
+        </div>
+    </footer>
+</body>
+
+</html>
