@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhancement Two: Algorithms and Data Structures - Tristen Bradney</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .narrative-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .narrative-section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .narrative-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #1abc9c;
+        }
+
+        .narrative-section h3 {
+            color: #3498db;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .narrative-section p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .complexity-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .complexity-table th,
+        .complexity-table td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .complexity-table th {
+            background: #3498db;
+            color: white;
+        }
+
+        .complexity-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            color: #1abc9c;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Tristen Bradney</a>
+            <ul class="nav-menu">
+                <li><a href="index.html#self-assessment" class="nav-link">Self-Assessment</a></li>
+                <li><a href="index.html#code-review" class="nav-link">Code Review</a></li>
+                <li><a href="index.html#enhancements" class="nav-link">Enhancements</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="narrative-content">
+            <a href="index.html#enhancements" class="back-link">← Back to Enhancements</a>
+
+            <h1>Enhancement Two: Algorithms and Data Structures</h1>
+            <p class="subtitle">Advanced Search, Sort, and Priority Queue Implementation</p>
+
+            <div class="narrative-section">
+                <h2>Artifact Description</h2>
+                <p>
+                    Building upon the MVVM architecture established in Enhancement One, this second enhancement focuses
+                    on optimizing the Inventory Manager application's algorithms and data structures. The original
+                    application used simple linear search and basic list operations, which would not scale well with
+                    larger datasets. This enhancement transforms the application into a more sophisticated inventory
+                    management system with advanced search capabilities, multiple sorting options, and priority queue
+                    functionality.
+                </p>
+                <p>
+                    <strong>Original Limitations:</strong>
+                </p>
+                <ul>
+                    <li>Linear search (O(n)) for finding items</li>
+                    <li>No sorting options for inventory items</li>
+                    <li>No priority or urgency tracking for low-stock items</li>
+                    <li>Inefficient database queries without optimization</li>
+                    <li>No way to quickly identify items needing attention</li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Justification for Inclusion</h2>
+                <p>
+                    I selected algorithms and data structures as the second enhancement category because it directly
+                    addresses real-world performance concerns in software applications. As datasets grow, the difference
+                    between O(n) and O(log n) operations becomes increasingly significant. This enhancement demonstrates
+                    my ability to:
+                </p>
+                <ul>
+                    <li><strong>Analyze algorithmic complexity:</strong> Evaluate existing algorithms and identify
+                        opportunities for optimization</li>
+                    <li><strong>Select appropriate data structures:</strong> Choose data structures that match the use
+                        case requirements</li>
+                    <li><strong>Implement efficient algorithms:</strong> Code binary search, optimized sorting, and
+                        heap-based priority queues</li>
+                    <li><strong>Balance trade-offs:</strong> Understand when to prioritize time complexity vs. space
+                        complexity vs. code simplicity</li>
+                    <li><strong>Optimize database operations:</strong> Apply algorithmic thinking to database query
+                        optimization</li>
+                </ul>
+                <p>
+                    This enhancement showcases skills highly valued in the software industry, particularly in roles
+                    focused on performance optimization and system scalability. It demonstrates that I don't just write
+                    code that works—I write code that performs efficiently.
+                </p>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Specific Components Showcasing Skills</h2>
+
+                <h3>1. Binary Search Implementation</h3>
+                <p>
+                    I implemented a binary search algorithm for the inventory list when items are sorted by name. This
+                    provides O(log n) search time compared to the original O(n) linear search, significantly improving
+                    performance for larger inventories.
+                </p>
+
+                <div class="highlight-box">
+                    <strong>Key Implementation Details:</strong>
+                    <ul>
+                        <li>Maintains sorted order when inserting new items</li>
+                        <li>Handles edge cases (empty list, single item, item not found)</li>
+                        <li>Implements iterative approach to avoid recursion overhead</li>
+                        <li>Includes fallback to linear search when list is unsorted</li>
+                    </ul>
+                </div>
+
+                <h3>2. Multi-Criteria Sorting</h3>
+                <p>
+                    I implemented multiple sorting algorithms using Java's Comparator interface, allowing users to sort
+                    inventory by:
+                </p>
+                <ul>
+                    <li><strong>Name:</strong> Alphabetical ordering using natural string comparison</li>
+                    <li><strong>Quantity:</strong> Numerical ordering to identify stock levels</li>
+                    <li><strong>Priority:</strong> Custom priority calculation based on quantity thresholds</li>
+                    <li><strong>Date Added:</strong> Chronological ordering using timestamps</li>
+                </ul>
+                <p>
+                    The implementation uses efficient comparison-based sorting with O(n log n) average time complexity,
+                    leveraging Java's optimized TimSort algorithm.
+                </p>
+
+                <h3>3. Priority Queue with Min-Heap</h3>
+                <p>
+                    I implemented a priority queue using a min-heap data structure to automatically identify and
+                    highlight
+                    inventory items that need immediate attention (low stock, high priority). This demonstrates:
+                </p>
+                <ul>
+                    <li>Understanding of heap properties and operations</li>
+                    <li>Efficient O(log n) insertion and extraction</li>
+                    <li>Practical application of data structures to solve business problems</li>
+                    <li>Ability to implement classic computer science algorithms from scratch</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>Priority Queue Use Cases:</strong>
+                    <ul>
+                        <li>Automatic alerts for items below reorder threshold</li>
+                        <li>Dashboard showing top N items needing attention</li>
+                        <li>Efficient processing of restocking tasks in priority order</li>
+                    </ul>
+                </div>
+
+                <h3>4. Database Query Optimization</h3>
+                <p>
+                    I optimized database queries by:
+                </p>
+                <ul>
+                    <li>Adding indexes on frequently searched columns</li>
+                    <li>Using ORDER BY clauses instead of sorting in-memory when possible</li>
+                    <li>Implementing pagination for large result sets</li>
+                    <li>Leveraging SQL's built-in aggregation functions</li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Performance Improvements</h2>
+
+                <table class="complexity-table">
+                    <thead>
+                        <tr>
+                            <th>Operation</th>
+                            <th>Original Complexity</th>
+                            <th>Enhanced Complexity</th>
+                            <th>Improvement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Search by Name</td>
+                            <td>O(n)</td>
+                            <td>O(log n)</td>
+                            <td>Exponential improvement for large datasets</td>
+                        </tr>
+                        <tr>
+                            <td>Sort Inventory</td>
+                            <td>Not available</td>
+                            <td>O(n log n)</td>
+                            <td>New functionality</td>
+                        </tr>
+                        <tr>
+                            <td>Find Top Priority Items</td>
+                            <td>O(n log n)</td>
+                            <td>O(k log n)</td>
+                            <td>Better when k << n</td>
+                        </tr>
+                        <tr>
+                            <td>Database Queries</td>
+                            <td>Full table scan</td>
+                            <td>Indexed lookup</td>
+                            <td>Orders of magnitude faster</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <strong>Real-World Impact:</strong>
+                    <p>
+                        For a dataset of 10,000 items, binary search requires approximately 14 comparisons compared to
+                        5,000 average comparisons with linear search—a reduction of over 99.7% in search operations.
+                    </p>
+                </div>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Enhancement Process and Learning</h2>
+
+                <h3>Design Decisions</h3>
+                <p>
+                    Before implementing the algorithms, I made several key design decisions:
+                </p>
+                <ul>
+                    <li>
+                        <strong>When to optimize:</strong> I applied the principle "make it work, make it right, make it
+                        fast," ensuring correctness before optimization.
+                    </li>
+                    <li>
+                        <strong>Space vs. time trade-offs:</strong> I chose to maintain a sorted index structure, using
+                        additional memory to achieve faster search times.
+                    </li>
+                    <li>
+                        <strong>Practical vs. theoretical optimization:</strong> While certain algorithms are
+                        theoretically superior, I selected algorithms that perform well with Android's constraints and
+                        the expected dataset sizes.
+                    </li>
+                </ul>
+
+                <h3>Implementation Challenges</h3>
+                <p>
+                    Several challenges emerged during implementation:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Maintaining sort order:</strong> Ensuring the list remains sorted after insertions,
+                        updates, and deletions required careful attention to edge cases.
+                    </li>
+                    <li>
+                        <strong>Thread safety:</strong> Since database operations occur on background threads, I had to
+                        ensure that sorting and searching didn't cause concurrency issues.
+                    </li>
+                    <li>
+                        <strong>UI responsiveness:</strong> For very large datasets, even O(n log n) operations can be
+                        noticeable. I implemented background processing with progress indicators.
+                    </li>
+                    <li>
+                        <strong>Testing edge cases:</strong> Binary search is notorious for off-by-one errors. I created
+                        comprehensive unit tests to verify correctness.
+                    </li>
+                </ul>
+
+                <h3>What I Learned</h3>
+                <p>
+                    This enhancement deepened my understanding of algorithms in several ways:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Big O notation is practical:</strong> The theoretical time complexity directly
+                        translated
+                        to measurable performance differences in the application.
+                    </li>
+                    <li>
+                        <strong>Context matters:</strong> The "best" algorithm depends on the specific
+                        constraints—dataset
+                        size, memory availability, update frequency, and acceptable latency.
+                    </li>
+                    <li>
+                        <strong>Premature optimization is real:</strong> I learned to profile first and optimize what
+                        actually matters, rather than optimizing everything.
+                    </li>
+                    <li>
+                        <strong>Data structures enable algorithms:</strong> Choosing the right data structure (like a
+                        heap for priority queues) makes certain algorithms natural and efficient.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Testing and Validation</h2>
+                <p>
+                    To ensure the correctness and performance of the implemented algorithms, I developed a comprehensive
+                    testing strategy:
+                </p>
+
+                <h3>Unit Tests</h3>
+                <ul>
+                    <li>Binary search correctness with various input sizes and patterns</li>
+                    <li>Sort stability verification (equal elements maintain original order)</li>
+                    <li>Priority queue heap property validation</li>
+                    <li>Edge case handling (empty lists, single elements, duplicates)</li>
+                </ul>
+
+                <h3>Performance Tests</h3>
+                <ul>
+                    <li>Benchmarked search operations with datasets of 100, 1000, and 10000 items</li>
+                    <li>Measured sorting performance across different sorting criteria</li>
+                    <li>Validated that algorithms met expected Big O complexity bounds</li>
+                </ul>
+
+                <h3>Integration Tests</h3>
+                <ul>
+                    <li>Verified algorithms work correctly with LiveData updates</li>
+                    <li>Ensured database queries return properly sorted/filtered results</li>
+                    <li>Tested UI responsiveness during heavy computational operations</li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Course Outcomes Alignment</h2>
+
+                <p>This enhancement directly addresses the following course outcomes:</p>
+
+                <h3>Outcome 3: Design and Evaluate Computing Solutions</h3>
+                <p>
+                    By analyzing the original implementation, identifying inefficiencies, and implementing optimized
+                    algorithms, I demonstrated the ability to design and evaluate computing solutions using algorithmic
+                    principles. The complexity analysis and performance comparisons show my understanding of the
+                    trade-offs
+                    involved in design choices.
+                </p>
+
+                <h3>Outcome 4: Well-Founded and Innovative Techniques</h3>
+                <p>
+                    The implementation of binary search, priority queues, and query optimization represents the
+                    application
+                    of well-founded computer science techniques to deliver tangible performance improvements. These are
+                    industry-standard approaches that demonstrate my ability to apply theoretical knowledge to practical
+                    problems.
+                </p>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Future Enhancements</h2>
+                <p>
+                    While this enhancement significantly improved the application's performance, several additional
+                    optimizations could be implemented in future iterations:
+                </p>
+                <ul>
+                    <li><strong>Trie data structure:</strong> For autocomplete functionality in search</li>
+                    <li><strong>Bloom filters:</strong> For quick existence checks before database queries</li>
+                    <li><strong>Caching layer:</strong> LRU cache for frequently accessed items</li>
+                    <li><strong>Parallel processing:</strong> Multi-threaded sorting for very large datasets</li>
+                    <li><strong>Machine learning:</strong> Predictive analytics for restocking recommendations</li>
+                </ul>
+            </div>
+
+            <div class="narrative-section">
+                <h2>Conclusion</h2>
+                <p>
+                    The algorithms and data structures enhancement transformed the Inventory Manager from a basic CRUD
+                    application into a performant, scalable inventory management system. This work demonstrates my
+                    ability
+                    to analyze algorithmic complexity, select appropriate data structures, and implement efficient
+                    solutions
+                    that deliver measurable improvements.
+                </p>
+                <p>
+                    Understanding algorithms and data structures is fundamental to computer science, and this
+                    enhancement
+                    showcases that I can apply this theoretical knowledge to solve real-world problems. The performance
+                    improvements achieved through proper algorithm selection and implementation represent the difference
+                    between an application that works and one that works efficiently at scale.
+                </p>
+                <p>
+                    This enhancement, combined with the MVVM architecture from Enhancement One, creates a solid
+                    foundation
+                    for the security enhancements in Enhancement Three. Together, these improvements demonstrate my
+                    growth
+                    as a software developer capable of building professional-quality applications that are
+                    well-architected,
+                    performant, and ready for real-world deployment.
+                </p>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://github.com/tbradn/CS499-Computer-Science-Capstone" target="_blank"
+                    class="btn-primary">View Code
+                    on GitHub</a>
+                <a href="index.html#enhancements" class="btn-secondary">Back to Enhancements</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tristen Bradney. All rights reserved.</p>
+            <p class="footer-note">CS-499 Computer Science Capstone | Southern New Hampshire University</p>
+        </div>
+    </footer>
+</body>
+
+</html>
